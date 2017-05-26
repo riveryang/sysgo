@@ -1,0 +1,7 @@
+.DS_Store
+.idea/
+sysgo
+vendor/
+bin/
+*.tmp
+routers/commentsRouter*
