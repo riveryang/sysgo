@@ -1,18 +1,18 @@
 package controllers
 
 import (
-	"github.com/astaxie/beego"
 	"github.com/riveryang/sysgo/models"
 )
 
 type SysController struct {
-	beego.Controller
+	BaseController
 }
 
 // @Title Get
 // @Description find pc stat
 // @router / [get]
 func (o *SysController) Get() {
+	o.AllowCross()
 	if pcStat, err := models.NewPcStat(); err != nil {
 		o.Data["json"] = err.Error()
 	} else {
