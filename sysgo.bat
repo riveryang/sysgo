@@ -17,7 +17,8 @@ if not exist %SYSGO_HOME% (
 
 if not exist %SYSGO_HOME%\sysgo.exe (
   copy sysgo.exe %SYSGO_HOME%\sysgo.exe
-  xcopy conf %SYSGO_HOME%\conf /s/e/i/y
 )
+
+regedit /s sysgo.reg
 
 start %SYSGO_HOME%\sysgo.exe
